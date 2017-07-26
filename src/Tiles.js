@@ -12,29 +12,18 @@ const Row = styled.div`
 
 const getCheckboxKey = ({ x, y }) => `tile-${x}-${y}`;
 
-const Tiles = () => {
-
-    const tilesConf = {
-        tiles: [
-            [{ color: 'red', x: 0, y: 0 }, { color: 'white', x: 1, y: 0 }, { color: 'red', x: 2, y: 0 }, { color: 'black', x: 3, y: 0 }],
-            [{ color: 'red', x: 0, y: 1 }, { color: 'white', x: 1, y: 1 }, { color: 'red', x: 2, y: 1 }, { color: 'black', x: 3, y: 1 }],
-            [{ color: 'red', x: 0, y: 2 }, { color: 'white', x: 1, y: 2 }, { color: 'red', x: 2, y: 2 }, { color: 'black', x: 3, y: 2 }]
-        ]
-    };
-
-    const tiles = tilesConf.tiles.map((row, i) =>
+const Tiles = (props) => {
+  return (
+    <Wrapper>
+      {props.tiles.map((row, i) =>
         <Row key={`tiles-row-${i}`}>
-            {
-                row.map(tile => <Tile key={getCheckboxKey(tile)} />)
-            }
+          {
+            row.map(tile => <Tile key={getCheckboxKey(tile)} />)
+          }
         </Row>
-    );
-
-    return (
-        <Wrapper>
-            {tiles}
-        </Wrapper>
-    );
+      )}
+    </Wrapper>
+  );
 };
 
 export default Tiles;

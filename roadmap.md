@@ -5,11 +5,12 @@
     - Color palete.    
     - Save tiles in memory.
     - Export tiles img.
+    - Style tites size.
 
 ## Doing
-    - Choose tile size.
-    - Choose n Tiles.
+    - Add redux.    
     - Update Title and Description.
 
 ## Done
     - Deploy to surge.
+    - Choose tiles size.

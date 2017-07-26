@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Tiles from './Tiles';
+import TilesConf from './TilesConf';
 import { addLocaleData, FormattedMessage, IntlProvider } from 'react-intl';
 import enLocale from 'react-intl/locale-data/en';
 import ptLocale from 'react-intl/locale-data/pt';
@@ -21,7 +21,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('this', this);
     return (
       <IntlProvider
         locale={this.state.langKey}
@@ -32,7 +31,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h2><FormattedMessage id="app.title" /></h2>
           </div>
-          <Tiles />
+          <TilesConf />
         </div>
       </IntlProvider>
     );
