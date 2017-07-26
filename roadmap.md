@@ -9,6 +9,7 @@
 ## Doing
     - Choose tile size.
     - Choose n Tiles.
+    - Update Title and Description.
 
 ## Done
     - Deploy to surge.
