@@ -15,7 +15,7 @@ const getCheckboxKey = ({ x, y }) => `tile-${x}-${y}`;
 const Tiles = (props) => {
   return (
     <Wrapper>
-      {props.tiles.map((row, i) =>
+      {props.tiles.rows.map((row, i) =>
         <Row key={`tiles-row-${i}`}>
           {
             row.map(tile => <Tile key={getCheckboxKey(tile)} />)

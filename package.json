@@ -8,7 +8,9 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-intl": "^2.3.0",
+    "react-redux": "^5.0.5",
     "react-scripts": "1.0.10",
+    "redux": "^3.7.2",
     "styled-components": "^2.1.1"
   },
   "scripts": {
@@ -16,6 +18,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "rm -rf build && npm run build && surge build/"
+    "deploy": "rm -rf build && npm run build && surge build/ --domain pool-tile-designer.surge.sh"
   }
 }
