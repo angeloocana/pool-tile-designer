@@ -26,18 +26,21 @@ describe('Tiles domain', () => {
     });
 
     it('invalid nRows', () => {
-      const tiles = createTiles({ nCols: 1, nRows: '' });
-      assert.notOk(tiles);
+      const tilesArgs = { size: { nCols: 1, nRows: '' } };
+      const tiles = createTiles(tilesArgs);
+      assert.deepEqual(tiles, tilesArgs);
     });
 
     it('invalid nCols', () => {
-      const tiles = createTiles({ nCols: '', nRows: 1 });
-      assert.notOk(tiles);
+      const tilesArgs = { size: { nCols: '', nRows: 1 } };
+      const tiles = createTiles(tilesArgs);
+      assert.deepEqual(tiles, tilesArgs);
     });
 
     it('invalid nRows and nCols', () => {
-      const tiles = createTiles({ nCols: '', nRows: '' });
-      assert.notOk(tiles);
+      const tilesArgs = { size: { nCols: '', nRows: '' } };
+      const tiles = createTiles(tilesArgs);
+      assert.deepEqual(tiles, tilesArgs);
     });
   });
 
@@ -84,23 +87,29 @@ describe('Tiles domain', () => {
 
     it('return oldTiles for invalid nRows', () => {
       const oldTiles = { rows: [[{ x: 0, y: 0, color: 'white' }]] };
-      const newTiles = resizeTiles({ nRows: '', nCols: 2 }, oldTiles);
+      const newSize = { nRows: '', nCols: 2 };
+      const newTiles = resizeTiles(newSize, oldTiles);
 
-      assert.equal(newTiles, oldTiles);
+      assert.equal(newTiles.rows, oldTiles.rows);
+      assert.equal(newTiles.size, newSize);
     });
 
     it('return oldTiles for invalid nCols', () => {
       const oldTiles = { rows: [[{ x: 0, y: 0, color: 'white' }]] };
-      const newTiles = resizeTiles({ nRows: 2, nCols: '' }, oldTiles);
+      const newSize = { nRows: 2, nCols: '' };
+      const newTiles = resizeTiles(newSize, oldTiles);
 
-      assert.equal(newTiles, oldTiles);
+      assert.equal(newTiles.rows, oldTiles.rows);
+      assert.equal(newTiles.size, newSize);
     });
 
     it('return oldTiles for invalid nRows and nCols', () => {
       const oldTiles = { rows: [[{ x: 0, y: 0, color: 'white' }]] };
-      const newTiles = resizeTiles({ nRows: '', nCols: '' }, oldTiles);
+      const newSize = { nRows: '', nCols: '' };
+      const newTiles = resizeTiles(newSize, oldTiles);
 
-      assert.equal(newTiles, oldTiles);
+      assert.equal(newTiles.rows, oldTiles.rows, 'not same rows');
+      assert.equal(newTiles.size, newSize, 'not new size');
     });
   });
 });

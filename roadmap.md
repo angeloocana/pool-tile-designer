@@ -4,8 +4,10 @@
     - Update README.
     - Save tiles in memory.
     - Export tiles img.
-    - Style tites size.
+    - Style tiles size.
     - undo redo.
+    - Setup Travis.
+    - Move to gatsby.
 
 ## Doing    
     - Color palete.    
