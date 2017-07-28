@@ -8,6 +8,7 @@
     - undo redo.
     - Setup Travis.
     - Move to gatsby.
+    - Add clean btn.
 
 ## Doing    
     - Color palete.    

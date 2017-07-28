@@ -2,7 +2,8 @@ const actions = {
   RESIZE_TILES: 'RESIZE_TILES',
   UPDATE_LANG: 'UPDATE_LANG',
   SELECT_COLOR: 'SELECT_COLOR',
-  PAINT_TILE: 'PAINT_TILE'
+  PAINT_TILE: 'PAINT_TILE',
+  CLEAN_TILES: 'CLEAN_TILES'
 };
 
 /**
@@ -31,8 +32,15 @@ const paintTile = (color, tile) => {
   }
 }
 
+const cleanTiles = () => {
+  return {
+    type: actions.CLEAN_TILES
+  }
+}
+
 export {
   actions,
+  cleanTiles,
   paintTile,
   resizeTiles,
   selectColor

@@ -8,6 +8,8 @@ const tiles = (state, action) => {
       return paintTile(action.color, action.tile, state);
     case actions.RESIZE_TILES:
       return resizeTiles(action.size, state);
+    case actions.CLEAN_TILES:
+      return defaultTiles;
     default:
       return state || defaultTiles;
   }
