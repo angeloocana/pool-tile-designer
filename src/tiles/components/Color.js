@@ -4,6 +4,7 @@ import { InvisibleSpan } from '../../core/components/Invisible';
 
 const Input = styled.input`
   appearance: none;
+  cursor: pointer;
   width: 2rem;
   height: 2rem;
   display: block;

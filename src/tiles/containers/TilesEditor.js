@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Tiles from '../components/Tiles';
 import { resizeTiles, selectColor, paintTile } from '../redux/actions';
 import TilesConf from '../components/TilesConf';
+import styled from 'styled-components';
 
 class TilesManager extends React.Component {
   render() {

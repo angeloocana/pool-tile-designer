@@ -8,8 +8,9 @@ import { white } from './Colors';
  * @returns {String} color
  */
 const getColor = (tiles, { x, y }) => {
-  if (tiles && tiles.rows[x] && tiles.rows[x][y])
-    return tiles.rows[x][y].color;
+  return (tiles && tiles.rows[x] && tiles.rows[x][y])
+    ? tiles.rows[x][y].color
+    : white;
 };
 
 /**
@@ -49,8 +50,8 @@ const createTiles = (tiles) => {
 };
 
 const defaultTilesSize = {
-  nRows: 10,
-  nCols: 40
+  nRows: 9,
+  nCols: 33
 }
 
 const defaultBg = 'red';
