@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { InvisibleSpan } from '../../shared/components/Invisible';
+import { InvisibleSpan } from '../../core/components/Invisible';
 
 const Input = styled.input`
   appearance: none;
