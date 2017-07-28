@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
-import TilesManager from './tiles/containers/TilesManager';
+import TilesEditor from './tiles/containers/TilesEditor';
 import { FormattedMessage, IntlProvider } from 'react-intl';
 
 const App = ({ i18n }) => {
@@ -16,7 +16,7 @@ const App = ({ i18n }) => {
           <img src={logo} className="App-logo" alt="logo" />
           <h2><FormattedMessage id="app.title" /></h2>
         </div>
-        <TilesManager />
+        <TilesEditor />
       </div>
     </IntlProvider>
   );

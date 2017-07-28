@@ -22,4 +22,6 @@ const i18n = (state, action) => {
   }
 }
 
-export default i18n;
+export {
+  i18n
+};

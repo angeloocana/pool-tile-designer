@@ -18,7 +18,13 @@ const Tiles = (props) => {
       {props.tiles.rows.map((row, i) =>
         <Row key={`tiles-row-${i}`}>
           {
-            row.map(tile => <Tile key={getCheckboxKey(tile)} />)
+            row.map(tile => (
+              <Tile
+                key={getCheckboxKey(tile)}
+                tile={tile}
+                paintTile={props.paintTile}
+                selectedColor={props.selectedColor}
+              />))
           }
         </Row>
       )}
