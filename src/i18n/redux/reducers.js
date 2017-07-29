@@ -12,15 +12,15 @@ const getI18n = (langKey) => {
 
 const i18n = (state, action) => {
   switch (action.type) {
-    case actions.CHANGE_LANG:
-      return {
-        langKey: action.langKey,
-        messages: getI18n(action.langKey)
-      }
-    default:
-      return state || getI18n('en');
+  case actions.CHANGE_LANG:
+    return {
+      langKey: action.langKey,
+      messages: getI18n(action.langKey)
+    };
+  default:
+    return state || getI18n('en');
   }
-}
+};
 
 export {
   i18n

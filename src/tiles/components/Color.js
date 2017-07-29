@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'proptypes';
 import styled from 'styled-components';
 import { InvisibleSpan } from '../../core/components/Invisible';
 
@@ -13,10 +14,16 @@ const Input = styled.input`
   ${props => props.checked ? `
     transform: scale(1.2);
     transition: transform 0.5s;
-  ` : ``}
+  ` : ''}
 `;
 
 class Color extends React.Component {
+  static propTypes = {
+    selectColor: PropTypes.func,
+    color: PropTypes.object,
+    selectedColor: PropTypes.string
+  }
+
   onChange = (event) => {
     this.props.selectColor(this.props.color);
   }

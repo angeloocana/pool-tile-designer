@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'proptypes';
 import { FormattedMessage } from 'react-intl';
 import Colors from './Colors';
 import Size from './Size';
@@ -9,6 +10,10 @@ const BtnCleanTiles = styled.button`
 `;
 
 class TilesConf extends React.Component {
+  static propTypes = {
+    cleanTiles: PropTypes.func
+  }
+
   cleanTiles = (event) => {
     this.props.cleanTiles();
   }

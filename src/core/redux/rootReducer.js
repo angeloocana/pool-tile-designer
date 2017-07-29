@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 import { tiles, colors, selectedColor } from '../../tiles/redux/reducers';
 import { i18n } from '../../i18n/redux/reducers';
 

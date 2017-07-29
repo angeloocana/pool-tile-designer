@@ -16,4 +16,4 @@ export {
   white,
   defaultColors,
   defaultColor
-}
+};

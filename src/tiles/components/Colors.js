@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'proptypes';
 import { FormattedMessage } from 'react-intl';
 import Color from './Color';
 import styled from 'styled-components';
@@ -22,6 +23,12 @@ const Colors = ({ colors, selectedColor, selectColor }) => {
       </Ul>
     </section>
   );
+};
+
+Colors.propTypes = {
+  colors: PropTypes.array,
+  selectedColor: PropTypes.string,
+  selectColor: PropTypes.func
 };
 
 export default Colors;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'proptypes';
 import { connect } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
@@ -20,12 +21,16 @@ const App = ({ i18n }) => {
       </div>
     </IntlProvider>
   );
-}
+};
+
+App.propTypes = {
+  i18n: PropTypes.object
+};
 
 const mapStateToProps = state => {
   return {
     i18n: state.i18n
-  }
-}
+  };
+};
 
 export default connect(mapStateToProps)(App);

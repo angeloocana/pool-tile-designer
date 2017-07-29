@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'proptypes';
 import styled from 'styled-components';
 import Tile from './Tile';
 
@@ -30,6 +31,10 @@ const Tiles = (props) => {
       )}
     </Wrapper>
   );
+};
+
+Tiles.propTypes = {
+  tiles: PropTypes.object
 };
 
 export default Tiles;

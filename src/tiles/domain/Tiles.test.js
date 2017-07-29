@@ -77,8 +77,8 @@ describe('Tiles domain', () => {
         size: newSize,
         bg: 'red',
         rows: [
-          [{ x: 0, y: 0, color: 'white' }, { x: 1, y: 0, color: undefined }],
-          [{ x: 0, y: 1, color: undefined }, { x: 1, y: 1, color: undefined }],
+          [{ x: 0, y: 0, color: 'white' }, { x: 1, y: 0, color: null }],
+          [{ x: 0, y: 1, color: null }, { x: 1, y: 1, color: null }],
         ]
       };
 

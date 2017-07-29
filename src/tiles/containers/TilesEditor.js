@@ -20,25 +20,25 @@ const mapStateToProps = state => {
     tiles: state.tiles,
     colors: state.colors,
     selectedColor: state.selectedColor
-  }
-}
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
     onSizeChange: size => {
-      dispatch(resizeTiles(size))
+      dispatch(resizeTiles(size));
     },
     selectColor: color => {
-      dispatch(selectColor(color))
+      dispatch(selectColor(color));
     },
     paintTile: (color, tile) => {
-      dispatch(paintTile(color, tile))
+      dispatch(paintTile(color, tile));
     },
     cleanTiles: () => {
-      dispatch(cleanTiles())
+      dispatch(cleanTiles());
     }
-  }
-}
+  };
+};
 
 export default connect(
   mapStateToProps,

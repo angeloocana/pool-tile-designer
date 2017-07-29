@@ -1,7 +1,13 @@
 import React from 'react';
+import PropTypes from 'proptypes';
 import { FormattedMessage } from 'react-intl';
 
 class Size extends React.Component {
+  static propTypes = {
+    tiles: PropTypes.object,
+    onSizeChange: PropTypes.func
+  }
+
   changeCols = (event) => {
     const size = {
       nRows: this.props.tiles.size.nRows,

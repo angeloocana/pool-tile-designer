@@ -9,34 +9,35 @@ const actions = {
 /**
  * Create an action to resize tiles.
  * @param {*} size new size
+ * @returns {Action} resize tiles action
  */
 const resizeTiles = (size) => {
   return {
     type: actions.RESIZE_TILES,
     size
-  }
-}
+  };
+};
 
 const selectColor = (color) => {
   return {
     type: actions.SELECT_COLOR,
     color
-  }
-}
+  };
+};
 
 const paintTile = (color, tile) => {
   return {
     type: actions.PAINT_TILE,
     tile,
     color
-  }
-}
+  };
+};
 
 const cleanTiles = () => {
   return {
     type: actions.CLEAN_TILES
-  }
-}
+  };
+};
 
 export {
   actions,
@@ -44,4 +45,4 @@ export {
   paintTile,
   resizeTiles,
   selectColor
-}
+};

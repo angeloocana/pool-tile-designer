@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'proptypes';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -17,6 +18,12 @@ const Input = styled.input`
 `;
 
 class Tile extends React.Component {
+  static propTypes = {
+    paintTile: PropTypes.func,
+    selectedColor: PropTypes.string,
+    tile: PropTypes.object
+  }
+
   onClick = (event) => {
     this.props.paintTile(this.props.selectedColor, this.props.tile);
   }

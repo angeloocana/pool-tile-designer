@@ -7,9 +7,9 @@ const changeLang = (langKey) => {
     type: actions.CHANGE_LANG,
     langKey
   };
-}
+};
 
 export {
   actions,
   changeLang
-}
+};
