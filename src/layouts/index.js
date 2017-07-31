@@ -5,6 +5,9 @@ import Footer from '../components/Footer';
 import { siteMetadata } from '../../gatsby-config';
 import styled, { ThemeProvider } from 'styled-components';
 import theme from '../themes/theme';
+import { connect, Provider } from 'react-redux';
+import store from '../core/redux/store';
+import { IntlProvider } from 'react-intl';
 
 const Background = styled.div`
   background-color: ${props => props.theme.bg};
@@ -26,26 +29,46 @@ const BodyContainer = styled.div`
   font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
 `;
 
-class Wrapper extends React.Component {
-  static propTypes = {
-    children: PropTypes.func
-  }
-
-  render() {
-    return (
+let Wrapper = ({ i18n, children }) => {
+  return (
+    <IntlProvider
+      locale={i18n.langKey}
+      messages={i18n.messages}
+    >
       <ThemeProvider theme={theme}>
         <Background>
           <BodyContainer>
             <Header siteMetadata={siteMetadata} />
             <main>
-              {this.props.children()}
+              {children()}
             </main>
             <Footer siteMetadata={siteMetadata} />
           </BodyContainer>
         </Background>
       </ThemeProvider>
-    );
-  }
-}
+    </IntlProvider>
+  );
+};
 
-export default Wrapper;
+Wrapper.propTypes = {
+  children: PropTypes.func,
+  i18n: PropTypes.object
+};
+
+const mapStateToProps = state => {
+  return {
+    i18n: state.i18n
+  };
+};
+
+Wrapper = connect(mapStateToProps)(Wrapper);
+
+const Layout = (props) => {
+  return (
+    <Provider store={store}>
+      <Wrapper {...props} />
+    </Provider>
+  );
+};
+
+export default Layout;

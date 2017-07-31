@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import PostList from '../components/PostList';
 import SocialLinks from '../components/SocialLinks';
 import Welcome from '../components/Welcome';
+import TilesEditor from '../tiles/containers/TilesEditor';
 
 class BlogIndexRoute extends React.Component {
   static propTypes = {
@@ -18,9 +19,9 @@ class BlogIndexRoute extends React.Component {
     return (
       <div>
         <Helmet title={siteMetadata.title} />
-        <SocialLinks />
         <Welcome />
-        <PostList posts={posts} />
+        <TilesEditor />
+        <SocialLinks />
       </div>
     );
   }

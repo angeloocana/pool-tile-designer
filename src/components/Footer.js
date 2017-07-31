@@ -47,7 +47,7 @@ const Footer = ({ siteMetadata }) => {
           {' who lives in '} <span>{author.homeCity}</span>.
         </FooterSection>
       </A>
-      <A href={sourceCodeLink} target="_blank">
+      {/* <A href={sourceCodeLink} target="_blank">
         <FooterSection>
           <p>
             <GithubIcon />
@@ -57,7 +57,7 @@ const Footer = ({ siteMetadata }) => {
             Click <span>HERE</span> to check it out!!!
           </p>
         </FooterSection>
-      </A>
+      </A> */}
     </footer>
   );
 };
