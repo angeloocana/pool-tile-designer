@@ -5,17 +5,18 @@
     - Save tiles in memory.
     - Export tiles img.
     - Style tiles size.
-    - undo redo.
+    - undo and redo.
     - Setup Travis.
-    - Move to gatsby.
-    - Add clean btn.
-
+    
 ## Doing    
-    - Color palete.    
-    - Change tile color.
+    - Fix translations.
     - Update Title and Description.
 
 ## Done
+    - Add clean btn.
+    - Color palete.
+    - Move to gatsby.
+    - Change tile color.    
     - Add redux.
     - Deploy to surge.
     - Choose tiles size.
